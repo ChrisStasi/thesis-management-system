@@ -31,7 +31,7 @@ A comprehensive full-stack web application designed to streamline the administra
 1. **Clone the Repo:** Download the files and place the project folder in your XAMPP `htdocs` directory.
 2. **Database Setup:** - Open **phpMyAdmin**.
    - Create a new database (e.g., `thesis_db`).
-   - Import the `database.sql` file located in the root directory.
+   - Import the `diplwmatikh_erg2 (8).sql` file located in the root directory.
 3. **Configuration:** Ensure your database connection settings (host, user, pass) match your XAMPP environment.
 
 
@@ -64,6 +64,6 @@ A comprehensive full-stack web application designed to streamline the administra
 1. **Αντιγραφή Αρχείων:** Κατεβάστε τα αρχεία και τοποθετήστε τον φάκελο στο `htdocs` του XAMPP.
 2. **Ρύθμιση Βάσης:** - Ανοίξτε το **phpMyAdmin**.
    - Δημιουργήστε μια νέα βάση δεδομένων.
-   - Κάντε εισαγωγή (Import) το αρχείο `database.sql`.
+   - Κάντε εισαγωγή (Import) το αρχείο `diplwmatikh_erg2 (8).sql`.
 3. **Σύνδεση:** Επιβεβαιώστε ότι οι ρυθμίσεις σύνδεσης με τη βάση αντιστοιχούν στις ρυθμίσεις του XAMPP σας.
 
