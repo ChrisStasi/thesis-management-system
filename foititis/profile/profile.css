@@ -1,0 +1,153 @@
+/* =========================
+   RESET & BASE
+   ========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+.container {
+    max-width: 900px;            /* ⬅️ πιο φαρδύ */
+    margin: 40px auto;           /* ⬇️ λιγότερο ύψος */
+    padding: 32px 40px;          /* ⬇️ πιο compact */
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   HEADER
+   ========================= */
+header h1 {
+    text-align: center;
+    font-size: 26px;             /* ⬇️ λίγο μικρότερο */
+    font-weight: 600;
+    color: #1d4ed8;
+    margin-bottom: 28px;         /* ⬇️ λιγότερο κενό */
+}
+
+/* =========================
+   FORM LAYOUT
+   ========================= */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ⬅️ 2 στήλες */
+    gap: 20px 28px;
+}
+
+/* full width row (button) */
+form button {
+    grid-column: 1 / -1;
+}
+
+/* =========================
+   FIELDS
+   ========================= */
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+input {
+    height: 40px;                /* ⬇️ μικρότερο ύψος */
+    padding: 0 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+    color: #111827;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.12);
+}
+
+input:disabled {
+    background: #f3f4f6;
+    color: #6b7280;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+button {
+    margin-top: 6px;
+    height: 44px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   MESSAGES
+   ========================= */
+#message {
+    grid-column: 1 / -1;
+    margin-bottom: 14px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.success-message {
+    color: #065f46;
+    background: #ecfdf5;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.error-message {
+    color: #991b1b;
+    background: #fef2f2;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 700px) {
+    .container {
+        margin: 24px 14px;
+        padding: 24px;
+    }
+
+    form {
+        grid-template-columns: 1fr; /* ⬇️ 1 στήλη σε mobile */
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
+
+

@@ -1,0 +1,234 @@
+body{
+  margin:0;
+  font-family:system-ui,Arial;
+  background:#ffffff;              /* ΛΕΥΚΟ BACKGROUND */
+  color:#1f2937;                   /* Σκούρο κείμενο */
+}
+
+/* ================= CONTAINER ================= */
+.container{
+  width:1150px;
+  max-width:95%;
+  margin:40px auto;
+}
+
+/* ================= TITLES ================= */
+.page-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.badge{
+  background:#2563eb;
+  color:white;
+  padding:6px 14px;
+  border-radius:20px;
+}
+
+/* ================= GRID ================= */
+.grid{
+  display:grid;
+  grid-template-columns:380px 1fr;
+  gap:20px;
+}
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr}
+}
+
+/* ================= CARDS ================= */
+.card{
+  background:#ffffff;
+  border-radius:18px;
+  padding:18px;
+  border:1px solid #e5e7eb;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ================= SEARCH ================= */
+.search-form{
+  display:flex;
+  gap:10px;
+}
+
+.search-form input{
+  flex:1;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #d1d5db;
+  background:#ffffff;
+}
+
+/* ================= BUTTONS ================= */
+.btn{
+  padding:12px 14px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.btn-assign{
+  background:#22c55e;
+  color:#044734;
+}
+
+.btn-danger{
+  background:#ef4444;
+  color:white;
+}
+
+.btn:disabled{
+  opacity:.4;
+  cursor:not-allowed;
+}
+
+/* ================= STUDENT BOX ================= */
+.student-box{
+  margin-top:15px;
+  background:#f9fafb;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid #e5e7eb;
+}
+
+/* ================= TOPICS ================= */
+.topics-list{
+  display:grid;
+  gap:12px;
+}
+
+.topic-item{
+  background:#ffffff;
+  border-radius:14px;
+  padding:14px;
+  border:1px solid #e5e7eb;
+  transition:box-shadow .2s ease;
+}
+
+.topic-item:hover{
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.topic-title{
+  margin:0;
+}
+
+.topic-desc{
+  color:#6b7280;
+  font-size:14px;
+}
+
+/* ================= TOP BAR ================= */
+.topic-top{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.topic-actions{
+  display:flex;
+  gap:8px;
+}
+
+/* ================= STATUS PILL ================= */
+.pill{
+  display:inline-block;
+  margin-top:6px;
+  font-size:12px;
+  background:#e5e7eb;
+  color:#374151;
+  padding:4px 10px;
+  border-radius:20px;
+}
+/* =========================
+   ΕΝΕΡΓΗ ΔΙΠΛΩΜΑΤΙΚΗ
+   ========================= */
+.topic-item.active {
+  border: 2px solid #16a34a;
+  background: linear-gradient(135deg, #ecfdf5, #ffffff);
+  position: relative;
+}
+
+/* Badge επάνω δεξιά */
+.topic-item.active::after {
+  content: "ΕΝΕΡΓΗ";
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background: #16a34a;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+/* Πλαίσιο φοιτητή */
+.active-student-box {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #dcfce7;
+  border: 1px solid #86efac;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #065f46;
+}
+
+.active-student-box strong {
+  display: block;
+  font-size: 15px;
+}
+
+
+/* ===============================
+   ΥΠΟ ΕΞΕΤΑΣΗ ΔΙΠΛΩΜΑΤΙΚΗ
+   =============================== */
+
+.topic-item.under-review {
+  border: 2px solid #dc2626; /* κόκκινο */
+  background: linear-gradient(135deg, #fef2f2, #ffffff);
+  position: relative;
+}
+
+/* Badge επάνω δεξιά */
+.topic-item.under-review::after {
+  content: "ΥΠΟ ΕΞΕΤΑΣΗ";
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background: #dc2626;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+/* Πλαίσιο φοιτητή */
+.under-review-student-box {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #7f1d1d;
+}
+
+.under-review-student-box strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 2px;   /* 🔥 μικρό κενό */
+   line-height: 1.25; /* 🔥 πιο σφιχτό */
+}
+
+
+.under-review-label {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #991b1b;
+}
+

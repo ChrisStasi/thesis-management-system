@@ -1,0 +1,548 @@
+/* ===============================
+   RESET & BASE
+   =============================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+    line-height: 1.5;
+}
+
+/* ===============================
+   LAYOUT
+   =============================== */
+.container {
+    max-width: 960px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===============================
+   CARDS
+   =============================== */
+.card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* ===============================
+   TITLES
+   =============================== */
+.page-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.muted {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* ===============================
+   META INFO
+   =============================== */
+.meta {
+    display: grid;
+    gap: 10px;
+}
+
+.meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meta-label {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.meta-value {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===============================
+   BADGES
+   =============================== */
+.badge {
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    background: #eef2ff;
+    color: #3730a3;
+}
+
+/* ===============================
+   INVITATIONS
+   =============================== */
+.inv-list {
+    list-style: none;
+}
+
+.inv-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.inv-item:last-child {
+    border-bottom: none;
+}
+
+.inv-name {
+    font-weight: 500;
+}
+
+.inv-empty {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ===============================
+   INVITE UI
+   =============================== */
+.invite-ui {
+    display: grid;
+    gap: 12px;
+    max-width: 420px;
+}
+
+.label {
+    font-size: 14px;
+    color: #374151;
+}
+
+.select {
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+.btn,
+button {
+    background: #d2e0ff;
+    color: #5e2a88;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover,
+button:hover {
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+}
+
+.btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* ===============================
+   LOCKED MESSAGE
+   =============================== */
+.invitation-locked {
+    margin-top: 14px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #eef2ff;
+    border-left: 4px solid #2563eb;
+    font-size: 14px;
+}
+
+/* ===============================
+   ΥΠΟ ΕΞΕΤΑΣΗ
+   =============================== */
+#under-review-sections {
+    margin-top: 24px;
+}
+
+.ur-block {
+    padding: 18px 0;
+    border-top: 1px solid #f1f5f9;
+}
+
+.ur-block:first-of-type {
+    border-top: none;
+}
+
+.ur-block h3 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.ur-block input,
+.ur-block select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.ur-block input:focus,
+.ur-block select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* ===============================
+   DRAFT PREVIEW
+   =============================== */
+.draft-file {
+    margin-top: 12px;
+    padding: 12px 14px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.draft-file a {
+    color: #1e40af;
+    font-weight: 500;
+}
+
+.btn-delete-draft {
+    background: #fff1f2;
+    color: #be123c;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+}
+
+.btn-delete-draft:hover {
+    background: #ffe4e6;
+}
+
+/* ===============================
+   SAVE FEEDBACK
+   =============================== */
+.save-feedback {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    min-width: 280px;
+    padding: 14px 22px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+
+    opacity: 0;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.save-feedback.success {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    color: #065f46;
+}
+
+.save-feedback.error {
+    background: linear-gradient(135deg, #fef2f2, #fee2e2);
+    color: #7f1d1d;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .meta-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+
+
+.invite-card {
+    background: #ffffff;
+    border: 1px solid #e3e7ee;
+    border-radius: 12px;
+    padding: 20px 22px;
+    max-width: 520px;
+}
+
+.invite-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #1f2937;
+}
+
+.invite-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.invite-controls select {
+    flex: 1;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: 1px solid #cfd6e3;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.invite-controls select:focus {
+    outline: none;
+    border-color: #5b7cfa;
+}
+
+.invite-btn {
+    padding: 9px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #5b7cfa;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.invite-btn:hover {
+    background: #4a69e2;
+}
+
+.invite-btn:disabled {
+    background: #c7d2fe;
+    cursor: not-allowed;
+}
+
+.invite-message {
+    margin-top: 10px;
+    font-size: 13.5px;
+    color: #374151;
+}
+
+.invitation-locked {
+    display: flex;
+    gap: 14px;
+    padding: 16px 18px;
+    border-radius: 10px;
+    background: #f1f8f5;
+    border-left: 4px solid #2f8f6b;
+    font-size: 14.5px;
+    color: #1f3d33;
+}
+
+.invitation-icon {
+    font-size: 20px;
+    color: #2f8f6b;
+    margin-top: 2px;
+}
+
+.invitation-text strong {
+    font-weight: 600;
+}
+
+.invitation-text em {
+    font-style: normal;
+    font-weight: 500;
+    color: #2f8f6b;
+}
+
+/* ===============================
+   PRAKTIKO – MODERN CLEAN STYLE
+   =============================== */
+
+.praktiko {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #0f172a;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* -------------------------------
+   Headings
+   ------------------------------- */
+
+.praktiko h1 {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.praktiko h2 {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  margin: 4px 0 12px;
+}
+
+.praktiko h3 {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  margin: 14px 0;
+}
+
+/* -------------------------------
+   Text blocks
+   ------------------------------- */
+
+.praktiko p {
+  margin: 6px 0;
+}
+
+.praktiko .center {
+  text-align: center;
+}
+
+.praktiko strong {
+  font-weight: 600;
+}
+
+/* Τίτλος διπλωματικής */
+.praktiko .title {
+  text-align: center;
+  font-style: italic;
+  margin: 10px 0;
+  padding: 6px 10px;
+  background: #f8fafc;
+  border-left: 3px solid #2563eb;
+  border-radius: 4px;
+}
+
+/* -------------------------------
+   Λίστα Τριμελούς
+   ------------------------------- */
+
+.praktiko ol {
+  margin: 6px 0 10px 18px;
+  padding: 0;
+}
+
+.praktiko ol li {
+  margin: 2px 0;
+}
+
+/* -------------------------------
+   Τελικός βαθμός
+   ------------------------------- */
+
+.final-grade {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 12px 0;
+  color: #2563eb;
+}
+
+/* -------------------------------
+   Πίνακας βαθμών
+   ------------------------------- */
+
+.grades-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.grades-table th {
+  background: #f1f5f9;
+  font-weight: 600;
+  padding: 6px;
+  border-bottom: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+.grades-table td {
+  padding: 6px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.grades-table td:last-child,
+.grades-table th:last-child {
+  text-align: center;
+  width: 120px;
+}
+
+/* -------------------------------
+   Footer
+   ------------------------------- */
+
+.praktiko .footer {
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 1px dashed #cbd5e1;
+  font-size: 13px;
+  color: #334155;
+}
+
+/* ===============================
+   PRINT OPTIMIZATION
+   =============================== */
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .praktiko {
+    font-size: 13px;
+    color: #000;
+  }
+
+  .title {
+    background: none;
+    border-left: 2px solid #000;
+  }
+
+  .final-grade {
+    color: #000;
+  }
+}

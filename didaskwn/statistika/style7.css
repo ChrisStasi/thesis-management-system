@@ -1,0 +1,101 @@
+/* ======================================================
+   BASE
+   ====================================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Arial, sans-serif;
+    background: #f5f7fb;              /* φωτεινό γκρι-μπλε */
+    color: #1f2937;
+}
+
+/* ======================================================
+   CONTAINER
+   ====================================================== */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 36px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+/* ======================================================
+   HEADINGS
+   ====================================================== */
+h1 {
+    margin: 0 0 36px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    color: #2563eb;                   /* καθαρό μπλε */
+}
+
+h3 {
+    margin: 0 0 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+    text-align: center;
+}
+
+/* ======================================================
+   CHARTS WRAPPER
+   ====================================================== */
+.charts-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 26px;
+}
+
+/* ======================================================
+   CHART BOX
+   ====================================================== */
+.chart-box {
+    background: #f9fafb;
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* canvas breathing room */
+.chart-box canvas {
+    margin-top: 10px;
+}
+
+/* ======================================================
+   TYPOGRAPHY TWEAKS
+   ====================================================== */
+.chart-box h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin: 10px auto 0;
+    background: #93c5fd;             /* διακριτικό accent */
+    border-radius: 2px;
+}
+
+/* ======================================================
+   RESPONSIVE
+   ====================================================== */
+@media (max-width: 700px) {
+    .container {
+        margin: 20px;
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}

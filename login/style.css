@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #eef2f7, #dbe7f3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* ΚΟΝΤΕΪΝΕΡ */
+.login-container {
+    background: #ffffff;
+    width: 420px;
+    padding: 40px 38px;
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    animation: fadeIn 0.45s ease-in-out;
+}
+
+/* ΕΙΣΟΔΟΣ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ΤΙΤΛΟΣ */
+h2 {
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 28px;
+    color: #1f2937;
+    letter-spacing: 0.3px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    margin-bottom: 22px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #374151;
+    font-weight: 600;
+}
+
+/* INPUTS */
+.input-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* MESSAGES */
+.success {
+    color: #16a34a;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.error {
+    color: #dc2626;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 15px;
+}

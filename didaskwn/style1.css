@@ -1,0 +1,121 @@
+/* ===============================
+   BASE
+   =============================== */
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #eef1f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #1f2937;
+}
+
+/* ===============================
+   CONTAINER
+   =============================== */
+.container {
+    width: 100%;
+    max-width: 780px;
+    padding: 32px 36px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;   /* ⬅ απλό ουδέτερο border */
+    text-align: center;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+header h1 {
+    margin: 0 0 26px;
+    color: #0f172a;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+
+/* ===============================
+   MENU
+   =============================== */
+.menu {
+    margin-top: 18px;
+    text-align: left;
+}
+
+.menu h2 {
+    margin-bottom: 16px;
+    color: #374151;              /* ⬅ ουδέτερο, όχι μπλε */
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* ===============================
+   MENU LIST
+   =============================== */
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 14px 0;
+}
+
+/* ===============================
+   LINKS
+   =============================== */
+.menu ul li a {
+    display: block;
+    padding: 16px 20px;
+    background-color: #e5e7eb;
+    color: #0f172a;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+}
+
+/* Hover – ήπιο, σοβαρό */
+.menu ul li a:hover {
+    background-color: #e0e7ff;   /* ⬅ απαλό μπλε μόνο στο hover */
+    border-color: #c7d2fe;
+    color: #1e3a8a;
+}
+
+/* ===============================
+   LOGOUT
+   =============================== */
+.menu ul li a.logout {
+    background-color: #fee2e2;
+    border-color: #fecaca;
+    color: #7f1d1d;
+}
+
+.menu ul li a.logout:hover {
+    background-color: #fecaca;
+    border-color: #fca5a5;
+    color: #7f1d1d;
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 640px) {
+    .container {
+        padding: 24px 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+        padding: 14px 16px;
+    }
+}

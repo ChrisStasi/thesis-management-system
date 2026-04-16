@@ -1,0 +1,276 @@
+/* ==============================
+   Base variables
+   ============================== */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+
+    --success-bg: #ecfdf5;
+    --success-text: #166534;
+    --success-border: #bbf7d0;
+
+    --error-bg: #fef2f2;
+    --error-text: #7f1d1d;
+    --error-border: #fecaca;
+
+    --csv: #16a34a;
+    --csv-dark: #15803d;
+
+    --json: #2563eb;
+    --json-dark: #1e40af;
+
+    --details: #0f766e;
+    --details-dark: #115e59;
+}
+
+/* ==============================
+   Global
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    margin: 0;
+    color: var(--text);
+}
+
+/* ==============================
+   Layout
+   ============================== */
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ==============================
+   Header
+   ============================== */
+
+header {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px 20px;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* ==============================
+   Filters
+   ============================== */
+
+.filters {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 32px;
+}
+
+.filters form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+}
+
+.filters label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.filters select {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+    background: #fff;
+}
+
+.filters select:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.filters button {
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: var(--primary-dark);
+}
+
+/* ==============================
+   Export buttons
+   ============================== */
+
+.export-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 32px 0;
+}
+
+.export-btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CSV */
+.export-btn.csv {
+    background-color: var(--csv);
+}
+
+.export-btn.csv:hover {
+    background-color: var(--csv-dark);
+}
+
+/* JSON */
+.export-btn.json {
+    background-color: var(--json);
+}
+
+.export-btn.json:hover {
+    background-color: var(--json-dark);
+}
+
+/* ==============================
+   Diplomatikes grid
+   ============================== */
+
+.diplwmatikes-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 24px;
+}
+
+.diplwmatikes-list li {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+}
+
+/* Title */
+.diplwmatikes-list h3 {
+    margin: 0 0 14px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+/* Text */
+.diplwmatikes-list p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* ==============================
+   Details button
+   ============================== */
+
+.details-btn,
+.diplwmatikes-list a {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 18px;
+    background-color: var(--details);
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+.details-btn:hover,
+.diplwmatikes-list a:hover {
+    background-color: var(--details-dark);
+}
+
+/* ==============================
+   Messages
+   ============================== */
+
+.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid var(--success-border);
+    padding: 14px 16px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-border);
+    padding: 14px 16px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+/* ==============================
+   Details section
+   ============================== */
+
+.details {
+    margin-top: 32px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px;
+}
+
+.details h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--text);
+}
+
+.details ul {
+    margin-left: 18px;
+}
+
